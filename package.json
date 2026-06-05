@@ -1,0 +1,79 @@
+{
+  "name": "@vegamo/deepcode-cli",
+  "version": "0.1.27",
+  "description": "Deep Code CLI - Vibe coding for the deepseek-v4 model in your terminal",
+  "license": "MIT",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lessweb/deepcode-cli.git"
+  },
+  "homepage": "https://deepcode.vegamo.cn",
+  "bin": {
+    "deepcode": "./dist/cli.js"
+  },
+  "main": "./dist/cli.js",
+  "files": [
+    "dist/cli.js",
+    "templates/tools/**",
+    "templates/prompts/**",
+    "templates/skills/**",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node dist/cli.js",
+    "typecheck": "tsc -p ./ --noEmit",
+    "bundle": "esbuild ./src/cli.tsx --bundle --platform=node --format=esm --target=node20 --outfile=dist/cli.js --banner:js=\"#!/usr/bin/env node\" --jsx=automatic --jsx-import-source=react --packages=external --log-override:empty-import-meta=silent",
+    "lint": "eslint src/",
+    "lint:fix": "eslint src/ --fix",
+    "format": "prettier --write 'src/**/*.{ts,tsx}'",
+    "format:check": "prettier --check 'src/**/*.{ts,tsx}'",
+    "check": "npm run typecheck && npm run lint && npm run format:check",
+    "build": "npm run check && npm run bundle && node -e \"try { require('fs').chmodSync('dist/cli.js', 0o755); } catch(e) { }\"",
+    "test": "node src/tests/run-tests.mjs",
+    "test:single": "tsx --test",
+    "prepack": "npm run build",
+    "prepare": "husky",
+    "package": "npm run build && nexe dist/cli.js -o yb-ai",
+    "package:win": "npm run build && nexe dist/cli.js -o yb-ai.exe -t windows-x64-20.11.0",
+    "package:mac": "npm run build && nexe dist/cli.js -o yb-ai -t mac-x64-20.11.0",
+    "package:linux": "npm run build && nexe dist/cli.js -o yb-ai -t linux-x64-20.11.0"
+  },
+  "dependencies": {
+    "chalk": "^5.6.2",
+    "ejs": "^5.0.2",
+    "gradient-string": "^3.0.0",
+    "gray-matter": "^4.0.3",
+    "ignore": "^7.0.5",
+    "ink": "^7.0.4",
+    "ink-gradient": "^4.0.1",
+    "node-fetch": "^3.3.2",
+    "openai": "^6.35.0",
+    "react": "^19.2.5",
+    "undici": "^7.25.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.4",
+    "@types/ejs": "^3.1.5",
+    "@types/node": "^25.6.0",
+    "@types/react": "^19.2.14",
+    "esbuild": "^0.28.0",
+    "eslint": "^9.39.4",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "glob": "^13.0.6",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.0.4",
+    "nexe": "^5.0.0-beta.4",
+    "pkg": "^5.8.1",
+    "prettier": "^3.8.3",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.59.2"
+  }
+}
