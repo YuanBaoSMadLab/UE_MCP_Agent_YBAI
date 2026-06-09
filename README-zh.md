@@ -280,3 +280,11 @@ npm run package:win
 ---
 
 **让 AI 成为你的 Unreal Engine 开发伙伴！** 🎮✨
+<p>
+    <strong>
+        【虚幻5.8 MCP AI 智能体！一键奴役AI帮你做游戏~】
+        <a href="https://www.bilibili.com/video/BV1527y6hE4C?vd_source=d3c08f79204198e082c5943e2e1f07d1" target="_blank">
+            点击观看 Bilibili 演示视频
+        </a>
+    </strong>
+</p>
