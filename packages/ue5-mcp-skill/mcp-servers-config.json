@@ -1,0 +1,39 @@
+{
+  "_说明": "UE5.8 MCP 服务器配置 - 复制到对应 IDE 的配置文件中",
+
+  "DeepCode CLI 格式 (~/.deepcode/settings.json)": {
+    "mcpServers": {
+      "ue5": {
+        "type": "http",
+        "url": "http://localhost:8000/mcp"
+      }
+    }
+  },
+
+  "Trae CN 格式 (.trae-cn/mcp.json)": {
+    "mcpServers": {
+      "ue5": {
+        "type": "http",
+        "url": "http://localhost:8000/mcp"
+      }
+    }
+  },
+
+  "Cursor 格式 (.cursor/mcp.json)": {
+    "mcpServers": {
+      "ue5": {
+        "type": "http",
+        "url": "http://localhost:8000/mcp"
+      }
+    }
+  },
+
+  "Windsurf 格式 (.windsurf/mcp_config.json)": {
+    "mcpServers": {
+      "ue5": {
+        "type": "http",
+        "url": "http://localhost:8000/mcp"
+      }
+    }
+  }
+}

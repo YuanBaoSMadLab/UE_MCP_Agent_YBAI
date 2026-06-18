@@ -1,0 +1,12 @@
+# Normalize line endings to LF across all platforms
+* text=auto eol=lf
+
+# Binary files should not be normalized
+*.png binary
+*.jpg binary
+*.gif binary
+*.ico binary
+*.woff binary
+*.woff2 binary
+*.eot binary
+*.ttf binary

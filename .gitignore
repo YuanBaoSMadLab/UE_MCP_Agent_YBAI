@@ -1,0 +1,40 @@
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+ui/bin/
+ui/obj/
+
+# Portable Node.js (download separately)
+nodejs/
+
+# Compiled binaries
+*.exe
+*.dll
+*.pdb
+*.deps.json
+*.runtimeconfig.json
+
+# Scripts (not needed for source)
+*.ps1
+*.cmd
+*.bat
+
+# Logs
+*.log
+manager-log.txt
+
+# IDE
+.idea/
+.vscode/
+.DS_Store
+*.tgz
+
+# User config
+.deepcode/
+projects.json
+
+# Generated diagnostic files
+scripts/*.json
+diagnosis-result.md
