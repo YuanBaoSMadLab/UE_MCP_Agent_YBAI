@@ -31,6 +31,7 @@
     "start": "node dist/cli.js",
     "typecheck": "tsc -p ./ --noEmit",
     "bundle": "esbuild ./src/cli.tsx --bundle --platform=node --format=esm --target=node20 --outfile=dist/cli.js --banner:js=\"#!/usr/bin/env node\" --jsx=automatic --jsx-import-source=react --packages=external --log-override:empty-import-meta=silent",
+    "bundle:sea": "esbuild ./src/cli.tsx --bundle --platform=node --format=esm --target=node20 --outfile=dist/cli.mjs --jsx=automatic --jsx-import-source=react --packages=external --log-override:empty-import-meta=silent",
     "lint": "eslint src/",
     "lint:fix": "eslint src/ --fix",
     "format": "prettier --write 'src/**/*.{ts,tsx}'",
@@ -43,6 +44,7 @@
     "prepare": "husky",
     "package": "npm run build && nexe dist/cli.js -o yb-ai",
     "package:win": "npm run build && nexe dist/cli.js -o yb-ai.exe -t windows-x64-20.11.0",
+    "package:sea": "npm run bundle:sea && node --experimental-sea-config sea-config.json",
     "package:mac": "npm run build && nexe dist/cli.js -o yb-ai -t mac-x64-20.11.0",
     "package:linux": "npm run build && nexe dist/cli.js -o yb-ai -t linux-x64-20.11.0"
   },
@@ -74,6 +76,7 @@
     "lint-staged": "^17.0.4",
     "nexe": "^5.0.0-beta.4",
     "pkg": "^5.8.1",
+    "postject": "^1.0.0-alpha.6",
     "prettier": "^3.8.3",
     "tsx": "^4.21.0",
     "typescript": "^6.0.3",
