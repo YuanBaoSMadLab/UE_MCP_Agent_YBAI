@@ -11,6 +11,8 @@ nodejs/
 
 # Compiled binaries
 *.exe
+!YB-AI-Manager.exe
+!yb-ai-backend.exe
 *.dll
 *.pdb
 *.deps.json

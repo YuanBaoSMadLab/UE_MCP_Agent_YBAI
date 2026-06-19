@@ -10,7 +10,8 @@
   },
   "homepage": "https://github.com/YuanBaoSMadLab/UE_MCP_Agent_YBAI",
   "bin": {
-    "deepcode": "./dist/cli.js"
+    "deepcode": "./dist/cli.js",
+    "YBAI": "./bin/YBAI.js"
   },
   "main": "./dist/cli.js",
   "files": [
@@ -18,6 +19,8 @@
     "templates/tools/**",
     "templates/prompts/**",
     "templates/skills/**",
+    "YB-AI-Manager.exe",
+    "bin/YBAI.js",
     "README.md",
     "LICENSE"
   ],

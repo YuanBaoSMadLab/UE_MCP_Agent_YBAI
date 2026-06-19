@@ -6,6 +6,7 @@ namespace YB_AIManager
         private System.Windows.Forms.Panel panelProjects;
         private System.Windows.Forms.Button btnAddProject;
         private System.Windows.Forms.Label labelTitle;
+        private System.Windows.Forms.Label lblStatus;
         private System.Windows.Forms.TextBox txtCopyText;
         private System.Windows.Forms.Label labelReminder;
 
@@ -60,6 +61,17 @@ namespace YB_AIManager
             this.labelTitle.TabIndex = 2;
             this.labelTitle.Text = "YB-AI 项目管理器";
             // 
+            // lblStatus
+            // 
+            this.lblStatus.AutoSize = true;
+            this.lblStatus.Font = new System.Drawing.Font("Microsoft YaHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblStatus.Location = new System.Drawing.Point(600, 20);
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(100, 28);
+            this.lblStatus.TabIndex = 5;
+            this.lblStatus.Text = "检测中...";
+            this.lblStatus.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // txtCopyText
             // 
             this.txtCopyText.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
@@ -90,6 +102,7 @@ namespace YB_AIManager
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 610);
+            this.Controls.Add(this.lblStatus);
             this.Controls.Add(this.labelReminder);
             this.Controls.Add(this.txtCopyText);
             this.Controls.Add(this.labelTitle);
